@@ -331,7 +331,8 @@ cinder::volume::rbd::volume_tmp_dir: /tmp
 cinder::volume::rbd::rbd_secret_uuid: "%{hiera('cinder_rbd_secret_uuid')}"
 cinder::glance::glance_api_servers: "%{hiera('api_protocol')}://%{hiera('glance_public_address')}:%{hiera('glance_api_port')}"
 cinder::quota::quota_volumes: 120
-cinder::quota::quota_snapshots: 240
+rjil::cinder::quota_backups: 240
+rjil::cinder::enable_v1_api: false
 
 ########### Nova config
 ###################################
